@@ -1,9 +1,10 @@
-const cowsay = require("cowsay");
+const express = require('express');
+const app = express();
 
-console.log(cowsay.say({
-    text : "I'm a moooodule",
-    e : "00",
-    T : "U "
-}));
+app.get('/', (req, res) => {
+    res.send("You are in the first page!");
+});
 
-// or cowsay.think()
+app.listen(3000, () => {
+    console.log("serve is listening on port 3000");
+});
