@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #1b1f1f;
+  color: #f7f3ef;
+}
+
+h1 {
+  color: red;
+}
+/*# sourceMappingURL=style.css.map */

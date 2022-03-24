@@ -4,7 +4,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({extended:true}));
-
+app.use(express.static("public"));
 
 
 app.get('/', (req, res) => {
@@ -29,6 +29,12 @@ app.post("/formHandling",(req, res) => {
     let {fullname , age} = req.body;
     res.send(`thanks for posting your name is ${fullname} and your age is ${age}`);
 })
+
+/*IF USE METHOD GET
+app.get('/formHandling', (req, res) => {
+    let {fullname , age} = req.query;
+    res.send(`thanks ${fullname} for sending data`);
+})*/
 
 
 app.get('*', (req, res) => {
