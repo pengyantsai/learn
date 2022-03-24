@@ -38,7 +38,8 @@ app.get('/formHandling', (req, res) => {
 
 
 app.get('*', (req, res) => {
-    res.send("can not find what you want");
+    res.status(404);
+    res.sendFile(path.join(__dirname, 'error.html'));
 })
 
 
